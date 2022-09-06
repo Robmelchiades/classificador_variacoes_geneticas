@@ -1,0 +1,14 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
+
+training_text: 
+  filepath: data/01_raw/training_text
+  type: pandas.CSVDataSet
+  load_args:
+    sep: \|\|
+    engine: python
+    names: ["ID","TEXT"]
+    skiprows: 1
+
